@@ -8,29 +8,31 @@ namespace ConsoleApp1
 {
     internal class StackWithLinkedList
     {
-        private int value { get; set; }
-        private StackWithLinkedList nextNode { get; set; }
+        public LinkedList stack { get; set; }
 
-
-        public bool isEmpty(StackWithLinkedList firstNode) 
+        public StackWithLinkedList(int value) 
         {
-            return firstNode == null ? true:false;
+            stack = new LinkedList(value);
         }
 
         public void push(int value) 
         {
-            //Here push means inserting a node at the beginning of the linked list
-            StackWithLinkedList newNode = new StackWithLinkedList();
-            newNode.value = value;
-
-            if (isEmpty(this)) 
-            {
-            
-            }
-
+            stack.insertAtBeginingOfList(value);
         }
 
+        public void pop()
+        {
+            stack.deleteFromFront();
+        }
 
+        public void peek() 
+        {
+            stack.peek();
+        }
 
+        public void print() 
+        {
+            stack.printAllNodes();
+        }
     }
 }

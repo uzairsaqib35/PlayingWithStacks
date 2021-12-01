@@ -11,6 +11,7 @@ namespace ConsoleApp1
         static void Main(string[] args)
         {
             //Testing stack with arrays
+            Console.WriteLine("Stack Using Arrays");
             StackWithArrays swa = new StackWithArrays(50);
             swa.push(1);
             swa.push(2);
@@ -27,6 +28,25 @@ namespace ConsoleApp1
             swa.pop();
 
             swa.printStack();
+
+            Console.WriteLine("Stack Using Linked List");
+
+            StackWithLinkedList swl = new StackWithLinkedList(1);
+            swl.push(2);
+            swl.push(3);
+            swl.push(4);
+            swl.push(5);
+
+            swl.print();
+
+            swl.peek();
+
+            swl.pop();
+            swl.pop();
+            swl.pop();
+
+            swl.print();
+
 
             Console.ReadLine();
 
